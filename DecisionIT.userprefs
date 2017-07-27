@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{8D1A8A36-9CE1-4F90-B296-5D0A08016397}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DecisionIT/Models/DecisionITContext.cs">
+    <Files>
+      <File FileName="DecisionIT/Models/DecisionITContext.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

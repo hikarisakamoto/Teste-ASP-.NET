@@ -1,0 +1,128 @@
+﻿@model DecisionIT.Models.Participante
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Participante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.REG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PART)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_PART)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PAIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_PAIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_MUN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_MUN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUFRAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUFRAMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.END)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.END)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMPL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMPL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BAIRRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BAIRRO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

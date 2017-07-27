@@ -1,0 +1,137 @@
+﻿@model IEnumerable<DecisionIT.Models.Participante>
+
+@{
+    ViewBag.Title = "PARTICIPANTES";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Criar", "Create")
+</p>
+<table id="participante" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.REG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_PART)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_PAIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_MUN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUFRAMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.END)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAIRRO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.REG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PART)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PAIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CNPJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_MUN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUFRAMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.END)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAIRRO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalhar", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+@section Scripts
+    { 
+<script type="text/javascript">
+    $(function () {
+        $("#participante").dataTable({
+            "pagingType": "full_numbers"
+            , "scrollY": "600px"
+            , "columnDefs": [
+                { "width": "45px", "targets": 0 }
+                , { "width": "45px", "targets": 1 }
+                , { "width": "45px", "targets": 2 }
+                , { "width": "45px", "targets": 3 }
+                , { "width": "45px", "targets": 4 }
+                , { "width": "45px", "targets": 5 }
+                , { "width": "45px", "targets": 6 }
+                , { "width": "45px", "targets": 7 }
+                , { "width": "45px", "targets": 8 }
+                , { "width": "45px", "targets": 9 }
+                , { "width": "45px", "targets": 10 }
+                , { "width": "45px", "targets": 11 }
+                , { "width": "45px", "targets": 12 }
+                , { "width": "45px", "targets": 13 }
+            ]
+            , "order": [[1, "desc"]]
+            , "dom": 'Rlfrtip'
+            , "stateSave": "true"
+            , "lengthMenu": [[-1, 10, 20, 50, 100], ["All", 10, 20, 50, 100]]
+        });
+    });
+</script>
+}
